@@ -1,11 +1,16 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 1em;
+    text-align: center;
 }
 
 nav a {
@@ -18,7 +23,53 @@ main {
     padding: 2em;
 }
 
+#result {
+    background-color: #1e1e1e;
+    padding: 1em;
+    border: 1px solid #333;
+    margin-bottom: 2em;
+}
+
 canvas {
-    display: block;
-    margin: 0 auto;
+    margin: 2em 0;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #444;
+}
+
+.table td {
+    background-color: #2b2b2b;
+}
+
+
+/* Styles for Rows and Columns */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.column {
+    flex: 1;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.column-50 {
+    flex: 0 0 50%;
+    max-width: 50%;
 }

@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, send_from_directory
-from python.malware_analysis import scan_url_vt, get_url_report_vt, scan_file_vt, check_ip_abuseipdb
 import os
+from python.malware_analysis import scan_url_vt, get_url_report_vt, scan_file_vt, get_file_report_vt, check_ip_abuseipdb
 
 app = Flask(__name__)
 
@@ -36,6 +36,10 @@ def send_css(path):
 def send_js(path):
     return send_from_directory('js', path)
 
+@app.route('/images/<path:path>')
+def send_images(path):
+    return send_from_directory('images', path)
+
 @app.route('/api/search', methods=['POST'])
 def search_api():
     search_type = request.form.get('searchType')
@@ -54,12 +58,12 @@ def search_api():
             file_path = os.path.join('/tmp', file.filename)
             file.save(file_path)
             analysis_id = scan_file_vt(file_path)
-            result = get_url_report_vt(analysis_id)
+            result = get_file_report_vt(analysis_id)
             os.remove(file_path)
+
+        return jsonify(result)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-    return jsonify(result)
 
 if __name__ == '__main__':
     app.run(debug=True)

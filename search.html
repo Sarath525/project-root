@@ -9,24 +9,34 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="images/search.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <header>
-        <h1>Search for Malware</h1>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="search.html">Search</a>
-            <a href="login.html">Login</a>
-        </nav>
+        <div class="header-container">
+            <h1>Threat Remedy</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="mitigation.html">Mitigation</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
     </header>
     <main>
+        <h2 class="main-title">Search for Malware</h2>
         <form id="search-form">
-            <label for="search-type">Search Type:</label>
-            <select id="search-type">
-                <option value="url">URL</option>
-                <option value="ip">IP Address</option>
-                <option value="file">File</option>
-            </select>
-            <input type="text" id="search-input" placeholder="Enter URL or IP address">
-            <input type="file" id="file-input" style="display:none;">
+            <div class="form-row">
+                <select id="search-type">
+                    <option value="url">URL</option>
+                    <option value="ip">IP Address</option>
+                    <option value="file">File</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Enter URL or IP address">
+                <input type="file" id="file-input" style="display:none;">
+            </div>
             <button type="submit">Search</button>
         </form>
     </main>

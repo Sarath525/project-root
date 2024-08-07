@@ -1,19 +1,167 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-}
-
 nav a {
-    color: #fff;
-    margin: 0 1em;
+    color: white;
     text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 main {
-    padding: 2em;
+    text-align: center;
+    color: white;
+    padding: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a23;
+    color: white;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.logo {
+    font-size: 250%;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+nav ul li a.login {
+    border: 2px solid white;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    background-color: #1b1d1a;
+}
+
+.gulgul {
+    display: block;
+    width: 80%;
+    align-content: center;
+    margin-left: 100px;
+}
+
+.flexbox {
+    display: flex;
+    width: 1000px;
+    margin: 20px auto;
+    gap: 50px;
+}
+
+img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+    opacity: .5;
+}
+
+p {
+    color: white;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.right1 {
+    margin-left: 70px;
+}
+
+.left1 {
+    margin-right: 70px;
+}
+
+h1 {
+    color: white;
+}
+
+.left {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(245, 236, 236);
+}
+
+a:hover {
+    color: white;
+}
+
+.bx {
+    color: white;
+}
+
+#vicky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#vicky ul li {
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+#kutta {
+    padding: 7px;
+    margin: 7px;
+}
+
+i {
+    font-size: 45px;
+}
+
+.right right1 p {
+    size-adjust: 200px;
 }
